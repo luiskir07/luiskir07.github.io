@@ -1,3 +1,14 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registrado con éxito:', registration);
+            })
+            .catch((error) => {
+                console.log('Error al registrar el Service Worker:', error);
+            });
+    });
+}
 class ListaTareas {
     constructor() {
         // Cargar tareas desde localStorage o usar una lista por defecto
@@ -115,7 +126,7 @@ class ListaTareas {
     agregarTarea(tarea) {
         tarea = tarea.trim();
 
-        // Evitar tareas duplicadas
+
         if (this.tareas.some(t => t.tarea === tarea)) {
             alert('Esta tarea ya existe.');
             return;
@@ -134,19 +145,6 @@ class ListaTareas {
         }
     }
 }
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then((registration) => {
-                console.log('Service Worker registrado con éxito:', registration);
-            })
-            .catch((error) => {
-                console.log('Error al registrar el Service Worker:', error);
-            });
-    });
-}
-
 window.addEventListener('load', () => {
     window.listaTareas = new ListaTareas();
 });
