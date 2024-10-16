@@ -1,0 +1,56 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: #000; 
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white; 
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ccc; 
+}
+.container {
+    margin-top: 20px;
+}
+.area-entrada {
+    margin-bottom: 20px;
+}
+.list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+.texto-tarea {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.tarea-completada {
+    text-decoration: line-through;
+    color: gray;
+}
+.btn {
+    margin-left: 5px;
+}
+.area-icono-eliminacion {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.fecha-tarea {
+    color: #6c757d;
+    font-size: 12px;
+    text-align: center;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+}
